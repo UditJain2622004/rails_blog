@@ -1,13 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+
+<h1>Rails Blog</h1>
+<p>Welcome To My Blog</p>
 
 <%# Normal Html link %>
-<a href="/about">About</a>
+<%# <a href="/pages/about">About</a> %>
 
 
 <%# rails link_to
-Syntax - <%= link_to "Text to show" , variable name%>
+Syntax - <%= link_to "Text to show" , variable name, class:"any_class_we_wanna_add"%>
 <%# Variable name is made like , for route /about -> about_path
                         for route pages/about -> pages_about_path
                         for root route        -> root_path %>
 <%= link_to "Testing" , pages_testing_path%>
+</div>
