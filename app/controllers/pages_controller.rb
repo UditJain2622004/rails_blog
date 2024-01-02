@@ -5,6 +5,5 @@ class PagesController < ApplicationController
   def about
   end
 
-  def testing
-  end
+  
 end

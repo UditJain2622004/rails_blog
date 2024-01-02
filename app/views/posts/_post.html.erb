@@ -2,9 +2,11 @@
   <p>
     <h2><%= post.title %></h2>
   </p>
+  <h6><%= pluralize(post.views, "view") %></h6>
 
   <p>
     <%= post.body %>
   </p>
+  <p>by : <%= link_to post.user.name!="" ? post.user.name : post.user.email, user_path(post.user_id) %></p>
 
 </div>
