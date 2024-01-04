@@ -4,7 +4,11 @@ Rails.application.routes.draw do
         sessions: 'users/sessions',
         registrations: 'users/registrations'
       }
-  resources :posts
+
+  
+  resources :posts do
+    resources :comments   #defines comments routes like /posts/1/comments/3
+  end
   get "/u/:id", to: "users#profile", as: "user"
   root "pages#home"
   # get 'pages/home'

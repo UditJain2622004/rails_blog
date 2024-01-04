@@ -1,0 +1,12 @@
+<div class="container comment<%=comment.id%>"
+    style="border:1px solid black; padding: 1em; margin: 1em">
+    <span>By : <%= comment.user.name != "" ? comment.user.name : comment.user.email%></span><br/>
+    <span>Posted <%= time_ago_in_words(comment.created_at)%> ago</span>
+    <% if current_user == comment.user%>
+    <div class="button-group float-end">
+        <%= button_to "Delete", [post,comment], method: :delete, class:"btn btn-danger" %>
+    </div>
+    <% end %>
+    <hr/>
+    <%= comment.body%>
+</div>

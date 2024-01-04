@@ -1,0 +1,8 @@
+<%# model : [post, post.comments.build] because we want to create a new comment for this post
+its kind of like for /post/1/comment/2 %>
+<%= form_with(model: [post, post.comments.build]) do |f| %>
+    <div class="form-control">
+        <%= f.rich_text_area :body %>
+        <%= f.submit "Post", class: "btn btn-primary mt-1" %>
+    </div>
+<% end%>
